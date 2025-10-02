@@ -13,7 +13,7 @@ namespace Music_Player.Core
         public int Bitrate { get; set; }
         public int SampleRate { get; set; }
         public TimeSpan Duration { get; set; }
-        public required Image AlbumCover { get; set; }
+        public required Image? AlbumCover { get; set; }
 
         public string BitrateText => Bitrate > 0
             ? $"{Bitrate} kbps • {SampleRate / 1000} kHz"
@@ -37,39 +37,53 @@ namespace Music_Player.Core
             if (!File.Exists(filePath))
                 throw new FileNotFoundException("Arquivo não encontrado", filePath);
 
-            var metadata = new AudioMetadata();
-
             try
             {
                 using var tagFile = TagLib.File.Create(filePath);
 
                 // Informações da tag ID3
-                metadata.Title = tagFile.Tag.Title ?? Path.GetFileNameWithoutExtension(filePath);
-                metadata.Artist = tagFile.Tag.FirstPerformer ?? "Artista desconhecido";
-                metadata.Album = tagFile.Tag.Album ?? "Álbum desconhecido";
+                string title = tagFile.Tag.Title ?? Path.GetFileNameWithoutExtension(filePath);
+                string artist = tagFile.Tag.FirstPerformer ?? "Artista desconhecido";
+                string album = tagFile.Tag.Album ?? "Álbum desconhecido";
 
                 // Propriedades técnicas do áudio
-                metadata.Bitrate = tagFile.Properties.AudioBitrate;
-                metadata.SampleRate = tagFile.Properties.AudioSampleRate;
-                metadata.Duration = tagFile.Properties.Duration;
+                int bitrate = tagFile.Properties.AudioBitrate;
+                int sampleRate = tagFile.Properties.AudioSampleRate;
+                TimeSpan duration = tagFile.Properties.Duration;
 
                 // Capa do álbum (artwork)
+                Image? albumCover = null;
                 if (tagFile.Tag.Pictures.Length > 0)
                 {
                     var pictureData = tagFile.Tag.Pictures[0].Data.Data;
                     using var ms = new MemoryStream(pictureData);
-                    metadata.AlbumCover = Image.FromStream(ms);
+                    albumCover = Image.FromStream(ms);
                 }
+
+                var metadata = new AudioMetadata
+                {
+                    Title = title,
+                    Artist = artist,
+                    Album = album,
+                    Bitrate = bitrate,
+                    SampleRate = sampleRate,
+                    Duration = duration,
+                    AlbumCover = albumCover
+                };
+
+                return metadata;
             }
             catch
             {
                 // Se falhar ao ler metadata, usa valores padrão
-                metadata.Title = Path.GetFileNameWithoutExtension(filePath);
-                metadata.Artist = "Artista desconhecido";
-                metadata.Album = "Álbum desconhecido";
+                return new AudioMetadata
+                {
+                    Title = Path.GetFileNameWithoutExtension(filePath),
+                    Artist = "Artista desconhecido",
+                    Album = "Álbum desconhecido",
+                    AlbumCover = null
+                };
             }
-
-            return metadata;
         }
 
         /// <summary>
@@ -139,7 +153,7 @@ namespace Music_Player.Core
         /// <summary>
         /// Obtém apenas a capa do álbum
         /// </summary>
-        public static Image GetAlbumCover(string filePath)
+        public static Image? GetAlbumCover(string filePath)
         {
             try
             {
@@ -157,7 +171,7 @@ namespace Music_Player.Core
                 // Retorna null se não conseguir obter a capa
             }
 
-            return null!;
+            return null;
         }
     }
 }

@@ -154,11 +154,12 @@ namespace Music_Player.Core
         /// <summary>
         /// Libera todos os recursos
         /// </summary>
-        void IDisposable.Dispose()
+        public void Dispose()
         {
             Stop();
             _outputDevice?.Dispose();
             _audioFile?.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }
