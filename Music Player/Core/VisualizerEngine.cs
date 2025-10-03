@@ -104,32 +104,34 @@ namespace Music_Player.Core
         /// <param name="color2">Segunda cor do gradiente</param>
         public void DrawWithGradient(Graphics g, int width, int height, Color color1, Color color2)
         {
-            if (g == null || width <= 0 || height <= 0)
+            if (g == null || width <= 0 || height <= 0 || _barCount <= 0)
                 return;
 
             g.SmoothingMode = SmoothingMode.AntiAlias;
 
-            int barWidth = width / _barCount;
             int spacing = 2;
+            int totalSpacing = spacing * (_barCount + 1);
+            float barWidth = (float)(width - totalSpacing) / _barCount;
 
             for (int i = 0; i < _visualizerData.Length; i++)
             {
-                int barHeight = (int)(_visualizerData[i] * height * 0.8);
-                int x = i * barWidth;
+                int barHeight = (int)(_visualizerData[i] * height * 0.8f);
+                int x = (int)(spacing + i * (barWidth + spacing));
                 int y = height - barHeight;
 
-                // Interpola entre as duas cores baseado na posição
-                float ratio = (float)i / _barCount;
+                // Gradiente entre as cores
+                float ratio = (float)i / (_barCount - 1);
                 int r = (int)(color1.R * (1 - ratio) + color2.R * ratio);
-                int g_color = (int)(color1.G * (1 - ratio) + color2.G * ratio);
+                int gColor = (int)(color1.G * (1 - ratio) + color2.G * ratio);
                 int b = (int)(color1.B * (1 - ratio) + color2.B * ratio);
 
-                Color barColor = Color.FromArgb(r, g_color, b);
+                Color barColor = Color.FromArgb(r, gColor, b);
 
                 using SolidBrush brush = new(barColor);
-                g.FillRectangle(brush, x + spacing, y, barWidth - spacing * 2, barHeight);
+                g.FillRectangle(brush, x, y, barWidth, barHeight);
             }
         }
+
 
         /// <summary>
         /// Reseta todos os dados do visualizador para zero

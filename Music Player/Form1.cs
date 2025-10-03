@@ -457,7 +457,7 @@ namespace Music_Player
             if (!_audioPlayer.IsPlaying)
                 return;
 
-            _visualizer.Draw(e.Graphics, panelVisualizer.Width, panelVisualizer.Height);
+            _visualizer.DrawWithGradient(e.Graphics, panelVisualizer.Width, panelVisualizer.Height, Color.Purple, Color.Pink);
         }
 
         #endregion

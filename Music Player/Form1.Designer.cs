@@ -143,7 +143,7 @@ namespace Music_Player
             btnStop.FillColor = Color.FromArgb(45, 45, 45);
             btnStop.Font = new Font("Segoe UI", 10F);
             btnStop.ForeColor = Color.White;
-            btnStop.Location = new Point(658, 300);
+            btnStop.Location = new Point(659, 300);
             btnStop.Name = "btnStop";
             btnStop.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnStop.Size = new Size(50, 50);
@@ -177,7 +177,7 @@ namespace Music_Player
             btnNext.FillColor = Color.FromArgb(60, 60, 60);
             btnNext.Font = new Font("Segoe UI", 12F);
             btnNext.ForeColor = Color.White;
-            btnNext.Location = new Point(518, 300);
+            btnNext.Location = new Point(519, 300);
             btnNext.Name = "btnNext";
             btnNext.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnNext.Size = new Size(50, 50);
@@ -211,7 +211,7 @@ namespace Music_Player
             btnRepeat.FillColor = Color.FromArgb(45, 45, 45);
             btnRepeat.Font = new Font("Segoe UI", 10F);
             btnRepeat.ForeColor = Color.White;
-            btnRepeat.Location = new Point(588, 300);
+            btnRepeat.Location = new Point(589, 300);
             btnRepeat.Name = "btnRepeat";
             btnRepeat.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnRepeat.Size = new Size(50, 50);
@@ -446,7 +446,7 @@ namespace Music_Player
             panelVisualizer.Location = new Point(300, 200);
             panelVisualizer.Name = "panelVisualizer";
             panelVisualizer.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            panelVisualizer.Size = new Size(400, 80);
+            panelVisualizer.Size = new Size(409, 80);
             panelVisualizer.TabIndex = 22;
             panelVisualizer.Paint += PanelVisualizer_Paint;
             // 
