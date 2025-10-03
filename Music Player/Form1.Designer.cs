@@ -6,7 +6,6 @@ namespace Music_Player
     {
         private System.ComponentModel.IContainer components = null;
         private Guna2Button btnPlay;
-        private Guna2Button btnPause;
         private Guna2Button btnStop;
         private Guna2Button btnPrevious;
         private Guna2Button btnNext;
@@ -46,39 +45,36 @@ namespace Music_Player
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             FormDrag = new Guna2DragControl(components);
             ShadowForm = new Guna2ShadowForm(components);
             ElipseForm = new Guna2Elipse(components);
             btnPlay = new Guna2Button();
-            btnPause = new Guna2Button();
             btnStop = new Guna2Button();
             btnPrevious = new Guna2Button();
             btnNext = new Guna2Button();
@@ -138,35 +134,18 @@ namespace Music_Player
             btnPlay.Text = "▶";
             btnPlay.Click += BtnPlay_Click;
             // 
-            // btnPause
-            // 
-            btnPause.BorderColor = Color.Purple;
-            btnPause.BorderRadius = 8;
-            btnPause.BorderThickness = 1;
-            btnPause.CustomizableEdges = customizableEdges15;
-            btnPause.FillColor = Color.FromArgb(60, 60, 60);
-            btnPause.Font = new Font("Segoe UI", 12F);
-            btnPause.ForeColor = Color.White;
-            btnPause.Location = new Point(520, 300);
-            btnPause.Name = "btnPause";
-            btnPause.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnPause.Size = new Size(50, 50);
-            btnPause.TabIndex = 8;
-            btnPause.Text = "⏸";
-            btnPause.Click += BtnPause_Click;
-            // 
             // btnStop
             // 
             btnStop.BorderColor = Color.Purple;
             btnStop.BorderRadius = 8;
             btnStop.BorderThickness = 1;
-            btnStop.CustomizableEdges = customizableEdges21;
+            btnStop.CustomizableEdges = customizableEdges19;
             btnStop.FillColor = Color.FromArgb(45, 45, 45);
             btnStop.Font = new Font("Segoe UI", 10F);
             btnStop.ForeColor = Color.White;
-            btnStop.Location = new Point(730, 300);
+            btnStop.Location = new Point(658, 300);
             btnStop.Name = "btnStop";
-            btnStop.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnStop.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnStop.Size = new Size(50, 50);
             btnStop.TabIndex = 11;
             btnStop.Text = "⏹";
@@ -194,13 +173,13 @@ namespace Music_Player
             btnNext.BorderColor = Color.Purple;
             btnNext.BorderRadius = 8;
             btnNext.BorderThickness = 1;
-            btnNext.CustomizableEdges = customizableEdges17;
+            btnNext.CustomizableEdges = customizableEdges15;
             btnNext.FillColor = Color.FromArgb(60, 60, 60);
             btnNext.Font = new Font("Segoe UI", 12F);
             btnNext.ForeColor = Color.White;
-            btnNext.Location = new Point(590, 300);
+            btnNext.Location = new Point(518, 300);
             btnNext.Name = "btnNext";
-            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnNext.Size = new Size(50, 50);
             btnNext.TabIndex = 9;
             btnNext.Text = "⏭";
@@ -228,13 +207,13 @@ namespace Music_Player
             btnRepeat.BorderColor = Color.Purple;
             btnRepeat.BorderRadius = 8;
             btnRepeat.BorderThickness = 1;
-            btnRepeat.CustomizableEdges = customizableEdges19;
+            btnRepeat.CustomizableEdges = customizableEdges17;
             btnRepeat.FillColor = Color.FromArgb(45, 45, 45);
             btnRepeat.Font = new Font("Segoe UI", 10F);
             btnRepeat.ForeColor = Color.White;
-            btnRepeat.Location = new Point(660, 300);
+            btnRepeat.Location = new Point(588, 300);
             btnRepeat.Name = "btnRepeat";
-            btnRepeat.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnRepeat.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnRepeat.Size = new Size(50, 50);
             btnRepeat.TabIndex = 10;
             btnRepeat.Text = "🔁";
@@ -243,13 +222,13 @@ namespace Music_Player
             // btnAddFiles
             // 
             btnAddFiles.BorderRadius = 8;
-            btnAddFiles.CustomizableEdges = customizableEdges23;
+            btnAddFiles.CustomizableEdges = customizableEdges21;
             btnAddFiles.FillColor = Color.Purple;
             btnAddFiles.Font = new Font("Segoe UI", 10F);
             btnAddFiles.ForeColor = Color.White;
             btnAddFiles.Location = new Point(820, 70);
             btnAddFiles.Name = "btnAddFiles";
-            btnAddFiles.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnAddFiles.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnAddFiles.Size = new Size(120, 40);
             btnAddFiles.TabIndex = 16;
             btnAddFiles.Text = "➕ Adicionar";
@@ -260,13 +239,13 @@ namespace Music_Player
             btnAddFolder.BorderColor = Color.Purple;
             btnAddFolder.BorderRadius = 8;
             btnAddFolder.BorderThickness = 1;
-            btnAddFolder.CustomizableEdges = customizableEdges25;
+            btnAddFolder.CustomizableEdges = customizableEdges23;
             btnAddFolder.FillColor = Color.FromArgb(60, 60, 60);
             btnAddFolder.Font = new Font("Segoe UI", 10F);
             btnAddFolder.ForeColor = Color.White;
             btnAddFolder.Location = new Point(1080, 70);
             btnAddFolder.Name = "btnAddFolder";
-            btnAddFolder.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnAddFolder.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnAddFolder.Size = new Size(120, 40);
             btnAddFolder.TabIndex = 17;
             btnAddFolder.Text = "📁 Pasta";
@@ -277,13 +256,13 @@ namespace Music_Player
             btnClearPlaylist.BorderColor = Color.Purple;
             btnClearPlaylist.BorderRadius = 8;
             btnClearPlaylist.BorderThickness = 1;
-            btnClearPlaylist.CustomizableEdges = customizableEdges27;
+            btnClearPlaylist.CustomizableEdges = customizableEdges25;
             btnClearPlaylist.FillColor = Color.FromArgb(60, 60, 60);
             btnClearPlaylist.Font = new Font("Segoe UI", 10F);
             btnClearPlaylist.ForeColor = Color.White;
             btnClearPlaylist.Location = new Point(955, 70);
             btnClearPlaylist.Name = "btnClearPlaylist";
-            btnClearPlaylist.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnClearPlaylist.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnClearPlaylist.Size = new Size(110, 40);
             btnClearPlaylist.TabIndex = 18;
             btnClearPlaylist.Text = "🗑️ Limpar";
@@ -435,7 +414,7 @@ namespace Music_Player
             listPlaylist.Size = new Size(370, 400);
             listPlaylist.TabIndex = 20;
             listPlaylist.UseCompatibleStateImageBehavior = false;
-            listPlaylist.View = View.Details;
+            listPlaylist.View = View.Tile;
             listPlaylist.DragDrop += ListPlaylist_DragDrop;
             listPlaylist.DragEnter += ListPlaylist_DragEnter;
             listPlaylist.DoubleClick += ListPlaylist_DoubleClick;
@@ -444,7 +423,7 @@ namespace Music_Player
             // 
             txtSearch.BorderColor = Color.Purple;
             txtSearch.BorderRadius = 10;
-            txtSearch.CustomizableEdges = customizableEdges29;
+            txtSearch.CustomizableEdges = customizableEdges27;
             txtSearch.DefaultText = "";
             txtSearch.FillColor = Color.FromArgb(18, 18, 18);
             txtSearch.Font = new Font("Segoe UI", 9F);
@@ -452,7 +431,7 @@ namespace Music_Player
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "🔍 Pesquisar...";
             txtSearch.SelectedText = "";
-            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges28;
             txtSearch.Size = new Size(370, 36);
             txtSearch.TabIndex = 19;
             txtSearch.TextChanged += TxtSearch_TextChanged;
@@ -499,7 +478,6 @@ namespace Music_Player
             Controls.Add(btnShuffle);
             Controls.Add(btnPrevious);
             Controls.Add(btnPlay);
-            Controls.Add(btnPause);
             Controls.Add(btnNext);
             Controls.Add(btnRepeat);
             Controls.Add(btnStop);

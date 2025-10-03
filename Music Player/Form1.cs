@@ -103,6 +103,14 @@ namespace Music_Player
                     LoadCurrentFile();
                 }
 
+                if (_audioPlayer.IsPlaying)
+                {
+                    _audioPlayer.Pause();
+                    visualizerTimer.Stop();
+                    btnPlay.Text = "▶";
+                    return;
+                }
+
                 _audioPlayer.Play();
                 StartTimers();
                 btnPlay.Text = "⏸";
@@ -112,13 +120,6 @@ namespace Music_Player
                 MessageBox.Show($"Erro ao reproduzir: {ex.Message}",
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void BtnPause_Click(object sender, EventArgs e)
-        {
-            _audioPlayer.Pause();
-            visualizerTimer.Stop();
-            btnPlay.Text = "▶";
         }
 
         private void BtnStop_Click(object sender, EventArgs e)
@@ -468,10 +469,7 @@ namespace Music_Player
             switch (e.KeyCode)
             {
                 case Keys.Space:
-                    if (_audioPlayer.IsPlaying)
-                        BtnPause_Click(sender, e);
-                    else
-                        BtnPlay_Click(sender, e);
+                    BtnPlay_Click(sender, e);
                     e.Handled = true;
                     break;
 
